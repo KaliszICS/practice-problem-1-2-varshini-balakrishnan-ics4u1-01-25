@@ -4,6 +4,7 @@ class Notes {
 		//Try Catch
 
 		//Try code block - if at any point it throws an exception we jump to the catch block
+		//catch a runtime error
 		int arr[] = new int[2];
 
 		try {
@@ -17,7 +18,7 @@ class Notes {
 		}
 
 
-		// System.out.println("3"); - code cannot come between try and catch
+		// System.out.println("3"); //- code cannot come between try and catch
 		
 		//Catch runs only when an exception is thrown in the try block
 		
