@@ -6,6 +6,7 @@ class Notes {
 		//Try code block - if at any point it throws an exception we jump to the catch block
 		//catch a runtime error
 		int arr[] = new int[2];
+		
 
 		try {
 			//index out of bounds
