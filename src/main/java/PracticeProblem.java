@@ -6,7 +6,7 @@ public class PracticeProblem {
 
 	public static boolean validIndex (int[] arr, int index) {
 		try {
-			arr[index];
+			arr[index] = arr[index];
 			return true;
 		} catch (Exception e) {
 			return false;
