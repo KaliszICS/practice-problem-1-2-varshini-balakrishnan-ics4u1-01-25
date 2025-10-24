@@ -11,11 +11,6 @@ class Notes {
 		try {
 			//index out of bounds
 			arr[-1] = 5; //as soon as an exception is reached, the rest of the try code is not executed.
-			
-			
-			int a = 10/0;
-
-			int num4 = Integer.parseInt("Hello");
 		}
 
 
