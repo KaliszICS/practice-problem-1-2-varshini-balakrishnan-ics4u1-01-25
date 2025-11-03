@@ -1,10 +1,13 @@
 {
     // Use JDK 21 for the Java language server and project builds
     "java.jdt.ls.java.home": "/usr/lib/jvm/java-21-openjdk-amd64",
+    // Fallback for older extensions that still read java.home
+    "java.home": "/usr/lib/jvm/java-21-openjdk-amd64",
     "java.configuration.runtimes": [
         {
             "name": "JavaSE-21",
-            "path": "/usr/lib/jvm/java-21-openjdk-amd64"
+            "path": "/usr/lib/jvm/java-21-openjdk-amd64",
+            "default": true
         }
     ],
 
@@ -12,5 +15,16 @@
     "java.configuration.updateBuildConfiguration": "automatic",
 
     // Ensure Maven tasks launched from VS Code use JAVA_HOME when available
-    "maven.terminal.useJavaHome": true
+    "maven.terminal.useJavaHome": true,
+    "java.import.maven.enabled": true,
+    "java.import.gradle.enabled": false,
+    "java.server.launchMode": "Standard",
+    // Give the language server more heap to avoid crash loops
+    "java.jdt.ls.vmargs": "-Xms128m -Xmx2048m -XX:+UseG1GC -XX:+UseStringDeduplication",
+
+    // Ensure all VS Code integrated terminals use JDK 21 by default
+    "terminal.integrated.env.linux": {
+        "JAVA_HOME": "/usr/lib/jvm/java-21-openjdk-amd64",
+        "PATH": "/usr/lib/jvm/java-21-openjdk-amd64/bin:${env:PATH}"
+    }
 }

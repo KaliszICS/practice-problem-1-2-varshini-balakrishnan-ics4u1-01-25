@@ -1,9 +1,12 @@
 import java.lang.reflect.Method;
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 public class PracticeProblemTest {
 @Test
-@DisplayName("")
+@DisplayName("divide by zero returns 0")
 void divideTest3() {
     Class<?> testClass = PracticeProblem.class;
     try {
@@ -22,7 +25,7 @@ void divideTest3() {
 }
 }
 @Test
-@DisplayName("")
+@DisplayName("parse valid integer string")
 void safeConvertStringtoIntTest() {
     Class<?> testClass = PracticeProblem.class;
     try {
@@ -41,7 +44,7 @@ void safeConvertStringtoIntTest() {
 }
 }
 @Test
-@DisplayName("")
+@DisplayName("invalid alphanumeric returns 0")
 void safeConvertStringtoIntTest2() {
     Class<?> testClass = PracticeProblem.class;
     try {
@@ -60,7 +63,7 @@ void safeConvertStringtoIntTest2() {
 }
 }
 @Test
-@DisplayName("")
+@DisplayName("non-digit character returns 0")
 void safeConvertStringtoIntTest4() {
     Class<?> testClass = PracticeProblem.class;
     try {
@@ -79,7 +82,7 @@ void safeConvertStringtoIntTest4() {
 }
 }
 @Test
-@DisplayName("")
+@DisplayName("divide 10 by 5 equals 2")
 void divideTest1() {
     Class<?> testClass = PracticeProblem.class;
     try {
@@ -98,7 +101,7 @@ void divideTest1() {
 }
 }
 @Test
-@DisplayName("")
+@DisplayName("integer division handles remainder")
 void divideTest2() {
     Class<?> testClass = PracticeProblem.class;
     try {
@@ -117,7 +120,7 @@ void divideTest2() {
 }
 }
 @Test
-@DisplayName("")
+@DisplayName("valid index at start of array")
 void validIndexTest2() {
     Class<?> testClass = PracticeProblem.class;
     try {
@@ -136,7 +139,7 @@ void validIndexTest2() {
 }
 }
 @Test
-@DisplayName("")
+@DisplayName("invalid index beyond end returns false")
 void validIndexTest1() {
     Class<?> testClass = PracticeProblem.class;
     try {
@@ -155,7 +158,7 @@ void validIndexTest1() {
 }
 }
 @Test
-@DisplayName("")
+@DisplayName("empty string returns 0")
 void safeConvertStringtoIntTest3() {
     Class<?> testClass = PracticeProblem.class;
     try {
